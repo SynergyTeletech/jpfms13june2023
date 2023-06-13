@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/dp_8"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <TextView
+
+        android:layout_marginTop="@dimen/dp_15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="@color/color_blue"
+        android:text="Old Password"/>
+    <LinearLayout
+        android:weightSum="1"
+        android:orientation="horizontal"
+        android:background="@drawable/d_edtxt_green_border"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:padding="@dimen/dp_5"
+            android:background="@null"
+            android:id="@+id/ed_oldPassword"
+            android:layout_width="0dp"
+            android:layout_weight=".9"
+            android:layout_height="wrap_content" />
+
+
+
+
+    </LinearLayout>
+
+
+
+
+    <!--<TextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:textStyle="bold"-->
+    <!--android:textColor="@color/c_txt_blue"-->
+    <!--android:text="@string/old_password"/>-->
+
+    <!--<EditText-->
+    <!--android:layout_marginTop="@dimen/dp_2"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:padding="@dimen/dp_2"-->
+    <!--android:background="@drawable/d_edtxt_green_border"-->
+    <!--android:drawableRight="@drawable/ic_close_black_24dp"/>-->
+
+    <TextView
+
+        android:layout_marginTop="@dimen/dp_15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="@color/color_blue"
+        android:text="@string/new_password"/>
+
+    <LinearLayout
+        android:weightSum="1"
+        android:orientation="horizontal"
+        android:background="@drawable/d_edtxt_green_border"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:padding="@dimen/dp_5"
+            android:background="@null"
+            android:id="@+id/ed_change_password"
+            android:layout_width="0dp"
+            android:layout_weight=".9"
+            android:layout_height="wrap_content" />
+
+
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/dp_15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_blue"
+        android:text="@string/confirm_password"/>
+
+    <LinearLayout
+        android:weightSum="1"
+        android:orientation="horizontal"
+        android:background="@drawable/d_edtxt_green_border"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:padding="@dimen/dp_5"
+            android:background="@null"
+            android:id="@+id/ed_con_password"
+            android:layout_width="0dp"
+            android:layout_weight=".9"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/chn_pass_btn"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:background="@drawable/d_button_green"
+        android:text="@string/change_password" />
+
+</LinearLayout>

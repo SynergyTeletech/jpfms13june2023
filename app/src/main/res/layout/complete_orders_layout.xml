@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    tools:context=".fragments.FragmentAcceptedOrders">
+
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <TextView
+            android:id="@+id/cust_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:gravity="center_vertical"
+            android:text="ID" />
+
+        <TextView
+            android:id="@+id/customer_name"
+            style="@style/order_text"
+            android:paddingLeft="@dimen/dp_10"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1.5"
+            android:textAlignment="center"
+            android:gravity="center_vertical"
+            android:text="Customer Name" />
+
+        <TextView
+            android:id="@+id/location"
+            style="@style/order_text"
+            android:layout_width="0dp"
+            android:paddingLeft="10dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:gravity="center_vertical"
+            android:text="Project" />
+
+        <TextView
+            android:id="@+id/address"
+            style="@style/order_text"
+            android:layout_width="0dp"
+            android:visibility="gone"
+            android:paddingLeft="10dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:maxLines="2"
+            android:textAlignment="center"
+            android:text="Address" />
+
+        <TextView
+            android:id="@+id/contact_person"
+            style="@style/order_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="Name"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/phone_num"
+            style="@style/order_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dip"
+            android:layout_toRightOf="@+id/contact_person"
+            android:visibility="gone"
+
+
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+
+            android:text="Phone" />
+
+        <TextView
+            android:id="@+id/qunantity"
+            style="@style/order_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dip"
+            android:layout_toRightOf="@+id/phone_num"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:gravity="center_vertical"
+            android:text="Quantity" />
+
+        <TextView
+            android:id="@+id/balance_qty"
+            style="@style/order_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dip"
+            android:layout_toRightOf="@+id/qunantity"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:gravity="center_vertical"
+            android:text="Contact Person" />
+
+        <TextView
+            android:id="@+id/delivery_day"
+            style="@style/order_text"
+            android:layout_width="0dp"
+            android:paddingLeft="10dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dip"
+            android:layout_toRightOf="@+id/balance_qty"
+            android:layout_weight="1.1"
+            android:textAlignment="center"
+            android:gravity="center_vertical"
+            android:text="Delivery Day " />
+
+        <TextView
+            android:id="@+id/time"
+            style="@style/order_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dip"
+            android:paddingLeft="10dp"
+            android:layout_toRightOf="@+id/balance_qty"
+            android:layout_weight="1.2"
+            android:gravity="center_vertical"
+            android:textAlignment="center"
+            android:text="Unit Price" />
+
+        <TextView
+            android:id="@+id/status"
+            style="@style/order_text"
+            android:layout_width="0dp"
+            android:textAlignment="center"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dip"
+            android:layout_toRightOf="@+id/time"
+
+            android:layout_weight="1.4"
+            android:gravity="center_vertical"
+
+            android:text="status" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="Action"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ordersRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header" />
+
+    <LinearLayout
+        android:id="@+id/noPendingOrder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/tanker" />
+
+        <com.syneygy.fillnow.Jpfmsdutymanager.fillnowdutymanager1.custom.fonts.LatoSemiBoldTextView
+            style="@style/Base.TextAppearance.AppCompat.Headline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="No Pending Orders"
+            android:textAllCaps="true" />
+
+        <com.syneygy.fillnow.Jpfmsdutymanager.fillnowdutymanager1.custom.fonts.LatoBoldTextView
+            style="@style/Base.TextAppearance.AppCompat.Subhead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/dp_5"
+            android:text="Check All Open Orders to Accept"
+            android:textColor="@color/md_grey_700" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_30"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btnPendingOrderList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                app:cardBackgroundColor="@color/green"
+                app:cardCornerRadius="@dimen/dp_4">
+
+                <com.syneygy.fillnow.Jpfmsdutymanager.fillnowdutymanager1.custom.fonts.LatoRegularTextView
+                    style="@style/Base.TextAppearance.AppCompat.Subhead"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:text="Pending Orders"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_50"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/dp_10"
+
+                android:layout_marginRight="@dimen/dp_10"
+                android:gravity="center"
+                android:text="OR" />
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btnRefreshOrdeList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                app:cardBackgroundColor="@color/md_blue_400"
+                app:cardCornerRadius="@dimen/dp_4">
+
+                <com.syneygy.fillnow.Jpfmsdutymanager.fillnowdutymanager1.custom.fonts.LatoRegularTextView
+                    style="@style/Base.TextAppearance.AppCompat.Subhead"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:text="Refresh"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white" />
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/ll_child_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</RelativeLayout>

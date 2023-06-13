@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:queryHint="Search Here"
+        android:iconifiedByDefault="false"
+        android:visibility="gone"
+        android:layout_alignParentTop="true"
+        />
+
+    <EditText
+        android:id="@+id/et_lock_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Lock Id">
+
+    </EditText>
+    <ImageView
+        android:id="@+id/iv_search"
+        android:layout_width="34dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_search"
+        android:padding="@dimen/dp_4"
+        app:tint="@color/c_dark_blue">
+
+    </ImageView>
+    <com.syneygy.fillnow.Jpfmsdutymanager.fillnowdutymanager1.custom.fonts.LatoRegularTextView
+        android:id="@+id/alertHeaderTxt"
+        style="@style/Base.TextAppearance.AppCompat.Headline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@id/et_lock_id"
+        android:text="" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/alertListRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/alertHeaderTxt"
+        android:padding="@dimen/dp_10" />
+</RelativeLayout>

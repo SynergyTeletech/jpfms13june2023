@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/order_lay"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:background="@color/md_orange_50"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingStart="@dimen/dp_10"
+    android:weightSum="9">
+
+    <!--<TextView
+        android:id="@+id/cust_id"
+        style="@style/order_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="id" />-->
+
+    <LinearLayout
+        android:id="@+id/ll_orderlist"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/cust_id"
+            style="@style/order_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="orderId"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tv_OrderType"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="end"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/dp_5"
+            android:text="NORMAL"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/cust_name"
+        style="@style/order_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+
+        android:gravity="center_vertical|center_horizontal"
+        android:text="cust name" />
+
+    <TextView
+        android:id="@+id/location"
+        style="@style/order_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="loc" />
+    <TextView
+        android:id="@+id/tvEquipmentId"
+        style="@style/order_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:visibility="gone"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="Equipment ID" />
+
+    <LinearLayout
+        android:id="@+id/locationLay"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/dp_2"
+        android:layout_marginRight="@dimen/dp_2"
+        android:layout_weight="1"
+        android:gravity="center_vertical|center_horizontal"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/route_planInfo"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:gravity="center_vertical|center_horizontal"
+            android:src="@mipmap/google_maps" />
+
+        <TextView
+            android:id="@+id/address"
+            style="@style/order_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center_horizontal"
+
+            android:maxLines="3"
+            android:text="Address"
+            android:textSize="@dimen/sp_12" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/contact_person"
+        style="@style/order_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+
+        android:gravity="center_vertical|center_horizontal"
+
+        android:text="Name" />
+
+    <TextView
+        android:id="@+id/phone_num"
+        style="@style/order_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="5dip"
+        android:layout_toRightOf="@+id/contact_person"
+        android:layout_weight="1"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="Phone" />
+
+    <TextView
+        android:id="@+id/qunantity"
+        style="@style/order_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="5dip"
+        android:layout_toRightOf="@+id/phone_num"
+        android:layout_weight="1"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="Quantity" />
+
+    <TextView
+        android:id="@+id/time"
+        style="@style/order_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="5dip"
+        android:layout_toRightOf="@+id/qunantity"
+        android:layout_weight="1"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="Time" />
+
+    <TextView
+        android:id="@+id/status"
+        style="@style/order_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="5dip"
+        android:layout_toRightOf="@+id/time"
+
+        android:layout_weight="1"
+        android:gravity="center_vertical|center_horizontal"
+
+        android:text="" />
+
+    <TextView
+        android:id="@+id/actionButton"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginRight="@dimen/dp_5"
+        android:background="#580a31"
+        android:gravity="center"
+        android:text="Dispense"
+        android:textColor="@color/white" />
+</LinearLayout>

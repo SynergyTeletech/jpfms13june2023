@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:queryHint="Search Here"
+        android:iconifiedByDefault="false"
+  android:layout_marginTop="@dimen/dp_10"
+   android:visibility="gone"
+        android:layout_alignParentTop="true"
+        />
+
+
+
+
+    <com.syneygy.fillnow.Jpfmsdutymanager.fillnowdutymanager1.custom.fonts.LatoRegularTextView
+        android:id="@+id/alertHeaderTxt"
+        style="@style/Base.TextAppearance.AppCompat.Headline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_5"
+        android:gravity="center"
+        android:text="" />
+
+    <SearchView
+        android:id="@+id/serarch_view_lock_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/alertHeaderTxt"
+        android:gravity="center"
+        android:imeOptions="actionSearch"
+        android:hint="Enter Lock Id" />
+
+    <ImageView
+        android:id="@+id/iv_search"
+        android:layout_width="34dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_search"
+        android:padding="@dimen/dp_4"
+        android:visibility="gone"
+        android:layout_below="@id/alertHeaderTxt"
+        app:tint="@color/c_dark_blue">
+
+    </ImageView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/alertListRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/serarch_view_lock_id"
+        android:paddingStart="@dimen/dp_10"
+        android:paddingEnd="@dimen/dp_10"/>
+</RelativeLayout>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "402846272534",
+    "firebase_url": "https://jpfms-duty-manager-default-rtdb.firebaseio.com",
+    "project_id": "jpfms-duty-manager",
+    "storage_bucket": "jpfms-duty-manager.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:402846272534:android:383fa615a4997e026bb937",
+        "android_client_info": {
+          "package_name": "com.syneygy.fillnow.Jpfmsdutymanager.fillnowdutymanager1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "402846272534-ptlkf8d94463dm1esup7qt80lp2tfmvr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZmqjptT_neUCiDGJB8KdR7KsIMqwlknA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "402846272534-ptlkf8d94463dm1esup7qt80lp2tfmvr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

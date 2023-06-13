@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.syneygy.fillnow.Jpfmsdutymanager.fillnowdutymanager1">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission
+        android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <application
+        android:name=".BrancoApp"
+        android:allowBackup="true"
+        android:icon="@drawable/jpicon"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@drawable/jpicon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:targetApi="n">
+        <activity android:name=".activity.DataSyncActivity"></activity>
+
+        <activity android:name=".activity.SynergyDispenser"
+            android:screenOrientation="landscape" /> <!-- <meta-data -->
+        <!-- android:name="com.google.android.actions" -->
+        <!-- android:resource="@xml/motion_scene" /> -->
+        <activity
+            android:name=".activity.FreshDispenseActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.DispenserUnitActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".activity.DispenserUnitK"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".fragments.FragmentForgotPassword"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".activity.LoginActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".utils.InternetConnector_Receiver"
+            android:enabled="true">
+            <intent-filter>
+
+                <!-- Intent filters for broadcast receiver -->
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+                <action android:name="android.net.wifi.STATE_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".activity.BaseActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".activity.NavigationDrawerActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".activity.MainActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".activity.AnimationDemoActivity"
+            android:screenOrientation="landscape" />
+        <activity android:name=".activity.SettingsActivity" />
+        <activity
+            android:name=".activity.ReadOnlyDispenserUnitActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".activity.ReceiveFuelActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.syneygy.fillnow.Jpfmsdutymanager.printer.DeviceList"
+            android:screenOrientation="landscape" />
+        <activity android:name="com.syneygy.fillnow.Jpfmsdutymanager.printer.PrintActivity" />
+        <activity android:name="com.syneygy.fillnow.Jpfmsdutymanager.printer.DeviceList2" />
+        <activity
+            android:name=".activity.FreshDispenserUnitActivity"
+            android:screenOrientation="landscape" />
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyBOyN_bKXOKvmzPPltaTIR1Kp60kKK0z6c" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <service android:name=".services.SaveGoLocalOrderOfflineService" />
+
+        <receiver
+            android:name=".utils.NetworkChangeReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+                <action android:name="android.net.wifi.STATE_CHANGE" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

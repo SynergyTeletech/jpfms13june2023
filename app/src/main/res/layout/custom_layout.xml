@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_100"
+        android:text="Nozzle 1"
+        android:textSize="@dimen/sp_18"
+        android:background="@drawable/d_edtxt_green_border"
+        android:textColor="@color/color_blue"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:id="@+id/nozzle1"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_100"
+        android:text="Nozzle 2"
+        android:background="@drawable/d_edtxt_green_border"
+        android:textSize="@dimen/sp_18"
+        android:layout_weight="1"
+        android:textColor="@color/color_blue"
+        android:gravity="center"
+        android:id="@+id/nozzle2"/>
+
+</LinearLayout>

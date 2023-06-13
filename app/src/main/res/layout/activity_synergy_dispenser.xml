@@ -1,0 +1,1329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/md_grey_200"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/dp_5"
+            android:layout_weight="1"
+            android:background="@drawable/border">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:fillViewport="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/txtDispenseStatusLay"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <RelativeLayout
+                                android:id="@+id/dispensingLay"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+
+                                android:padding="@dimen/dp_5">
+
+                                <com.syneygy.fillnow.Jpfmsdutymanager.fillnowdutymanager1.custom.fonts.LatoRegularTextView
+                                    android:id="@+id/txtVolume"
+                                    style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="30dp"
+                                    android:layout_marginTop="5dp"
+                                    android:gravity="center"
+                                    android:text="Volume (In Ltr)" />
+
+                                <TextView
+                                    android:id="@+id/currentFuelDispensedQnty"
+                                    style="@style/Base.TextAppearance.AppCompat.Headline"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_toRightOf="@+id/txtVolume"
+                                    android:background="@color/c_dark_blue"
+                                    android:gravity="center_vertical|end"
+                                    android:maxLines="1"
+                                    android:padding="5dp"
+                                    android:paddingEnd="20dp"
+                                    android:text="0"
+                                    android:textAlignment="textEnd"
+                                    android:textColor="@color/white" />
+
+                                <com.syneygy.fillnow.Jpfmsdutymanager.fillnowdutymanager1.custom.fonts.LatoRegularTextView
+                                    android:id="@+id/txtAmount"
+                                    style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="30dp"
+                                    android:layout_below="@+id/currentFuelDispensedQnty"
+                                    android:layout_marginTop="5dp"
+                                    android:gravity="center"
+                                    android:text="Amount (In INR)" />
+
+                                <TextView
+                                    android:id="@+id/currentDispensedFuelChargeAmount"
+                                    style="@style/Base.TextAppearance.AppCompat.Headline"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_below="@+id/currentFuelDispensedQnty"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_toRightOf="@+id/txtVolume"
+                                    android:background="@color/c_dark_blue"
+                                    android:gravity="center_vertical|end"
+                                    android:maxLines="1"
+                                    android:paddingEnd="20dp"
+                                    android:text="0"
+                                    android:textAlignment="textEnd"
+                                    android:textColor="@color/white" />
+
+                                <com.syneygy.fillnow.Jpfmsdutymanager.fillnowdutymanager1.custom.fonts.LatoRegularTextView
+                                    android:id="@+id/txtAmountPerLtr"
+                                    style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="30dp"
+                                    android:layout_below="@+id/currentDispensedFuelChargeAmount"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_toRightOf="@+id/txtAmount"
+                                    android:gravity="center"
+                                    android:text="Rate (In Rs/Lts)" />
+
+                                <TextView
+                                    android:id="@+id/currentFuelRate"
+                                    style="@style/Base.TextAppearance.AppCompat.Headline"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/currentDispensedFuelChargeAmount"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_toRightOf="@+id/txtAmountPerLtr"
+                                    android:background="@color/c_dark_blue"
+                                    android:gravity="center_vertical|end"
+                                    android:maxLines="1"
+                                    android:padding="5dp"
+                                    android:paddingEnd="20dp"
+                                    android:text="0"
+                                    android:textAlignment="textEnd"
+                                    android:textColor="@color/white" />
+
+                                <com.syneygy.fillnow.Jpfmsdutymanager.fillnowdutymanager1.custom.fonts.LatoRegularTextView
+                                    android:id="@+id/txtTotalizer"
+                                    style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="30dp"
+                                    android:layout_below="@+id/currentFuelRate"
+                                    android:layout_marginTop="5dp"
+                                    android:gravity="center"
+                                    android:text="Totalizer"
+                                    android:visibility="gone" />
+
+                                <TextView
+                                    android:id="@+id/intialTotalizer"
+                                    style="@style/Base.TextAppearance.AppCompat.Headline"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/currentFuelRate"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_toRightOf="@+id/txtTotalizer"
+                                    android:background="#4F81BD"
+                                    android:gravity="center_vertical|end"
+                                    android:maxLines="1"
+                                    android:padding="5dp"
+                                    android:paddingEnd="20dp"
+                                    android:text="0"
+                                    android:textAlignment="textEnd"
+                                    android:textColor="@color/white"
+                                    android:visibility="gone" />
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:id="@+id/txtOtherDetailsLay"
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/dispensingLay"
+                                android:layout_marginTop="@dimen/dp_5"
+                                android:background="@drawable/border"
+                                android:gravity="center_horizontal"
+                                android:orientation="vertical">
+
+                                <com.syneygy.fillnow.Jpfmsdutymanager.fillnowdutymanager1.custom.fonts.LatoRegularTextView
+                                    android:id="@+id/location_id_test"
+                                    style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_marginTop="5dp"
+                                    android:gravity="center"
+                                    android:text="Location ID" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="@color/md_blue_grey_200" />
+
+                                <com.syneygy.fillnow.Jpfmsdutymanager.fillnowdutymanager1.custom.fonts.LatoRegularTextView
+                                    style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_marginTop="5dp"
+                                    android:gravity="center"
+                                    android:text="Asset ID" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="@color/md_blue_grey_200" />
+
+                                <com.syneygy.fillnow.Jpfmsdutymanager.fillnowdutymanager1.custom.fonts.LatoRegularTextView
+                                    style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_marginTop="5dp"
+                                    android:gravity="center"
+                                    android:text="Volume Preset(Lts)" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="@color/md_blue_grey_200" />
+
+                                <com.syneygy.fillnow.Jpfmsdutymanager.fillnowdutymanager1.custom.fonts.LatoRegularTextView
+                                    style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_marginTop="5dp"
+                                    android:gravity="center"
+                                    android:text="Rate" />
+
+                                <TextView
+                                    android:id="@+id/nozzleOnHook"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:background="@color/green"
+                                    android:gravity="center"
+                                    android:padding="@dimen/dp_5"
+                                    android:text="Keep Nozzle On Hook"
+                                    android:textColor="@color/white" />
+
+                               <!-- <TextView
+                                    android:id="@+id/setTOIdleBtn"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="@color/green"
+                                    android:gravity="center"
+                                    android:padding="@dimen/dp_5"
+                                    android:text=""
+                                    android:textColor="@color/white" />-->
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="#FFFF00"
+                                    android:layout_marginTop="@dimen/dp_5"
+                                    android:gravity="center">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="25dp"
+                                        android:background="#A2A7EB"
+                                        android:gravity="center"
+                                        android:text="Total Balance Available "
+                                        android:textColor="@color/black" />
+
+                                    <TextView
+                                        android:id="@+id/tv_total_balance_available"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="25dp"
+                                        android:background="#FFFF00"
+                                        android:gravity="center"
+                                        android:text=""
+                                        android:textColor="@color/black" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="25dp"
+                                        android:background="#A2A7EB"
+                                        android:gravity="center"
+                                        android:text=" Lts"
+                                        android:textColor="@color/black" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/test_rate"
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/dispensingLay"
+                                android:layout_marginTop="@dimen/dp_5"
+                                android:layout_toRightOf="@+id/txtOtherDetailsLay"
+                                android:background="@drawable/border"
+                                android:orientation="vertical">
+
+                                <com.syneygy.fillnow.Jpfmsdutymanager.fillnowdutymanager1.custom.fonts.LatoRegularTextView
+                                    android:id="@+id/tvDispenserLocationId"
+                                    style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_marginTop="5dp"
+                                    android:gravity="center"
+                                    android:text="" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="@color/md_blue_grey_200" />
+
+
+                                <com.syneygy.fillnow.Jpfmsdutymanager.fillnowdutymanager1.custom.fonts.LatoRegularTextView
+                                    android:id="@+id/dispenserSelectedAssetId"
+                                    style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="20dp"
+                                    android:gravity="center"
+                                    android:text="Selected Asset"
+                                    android:textColor="@color/black" />
+
+                                <com.syneygy.fillnow.Jpfmsdutymanager.fillnowdutymanager1.custom.fonts.LatoRegularTextView
+                                    android:id="@+id/dispenserSelectAsset"
+                                    style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="20dp"
+                                    android:layout_marginTop="5dp"
+                                    android:gravity="center"
+                                    android:text="Select Other Asset"
+                                    android:textAllCaps="true"
+                                    android:textColor="#92064D" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="@color/md_blue_grey_200" />
+
+                                <com.syneygy.fillnow.Jpfmsdutymanager.fillnowdutymanager1.custom.fonts.LatoRegularTextView
+                                    android:id="@+id/dispenserPresetVolume"
+                                    style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_marginTop="5dp"
+                                    android:gravity="center"
+                                    android:text="FJGJGJGGGK" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="@color/md_blue_grey_200" />
+
+                                <com.syneygy.fillnow.Jpfmsdutymanager.fillnowdutymanager1.custom.fonts.LatoRegularTextView
+                                    android:id="@+id/dispenserFuelRate"
+                                    style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_marginTop="5dp"
+                                    android:gravity="center"
+                                    android:text="" />
+
+                            </LinearLayout>
+
+                            <!--  <TextView
+                                  android:layout_width="match_parent"
+                                  android:layout_height="40dp"
+                                  android:id="@+id/rate_test"
+                                  android:layout_below="@+id/test_rate"
+                                  android:text="Test Rate"
+                                  android:layout_marginTop="40dp"
+                                  android:gravity="center"/>
+
+                              <EditText
+                                  android:layout_width="match_parent"
+                                  android:layout_height="40dp"
+                                  android:id="@+id/et_testRate"
+                                  android:layout_below="@+id/rate_test"
+                                  android:text="50.45"
+                                  android:hint="Set Rate"
+                                  android:layout_marginTop="40dp"
+                                  android:gravity="center"/>-->
+
+
+                            <LinearLayout
+                                android:id="@+id/ll_btn_visibility"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginTop="@dimen/dp_20"
+
+                                android:orientation="horizontal">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="0dp"
+                                    android:layout_height="70dp"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_margin="@dimen/dp_5"
+                                    android:layout_weight="1"
+                                    app:cardCornerRadius="@dimen/dp_4">
+
+                                    <com.syneygy.fillnow.Jpfmsdutymanager.fillnowdutymanager1.custom.fonts.LatoRegularTextView
+                                        android:id="@+id/btnSuspend"
+                                        style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="70dp"
+                                        android:layout_gravity="center"
+                                        android:background="@color/gray"
+                                        android:enabled="false"
+                                        android:gravity="center"
+                                        android:padding="5dp"
+                                        android:text="Suspend"
+                                        android:textColor="@color/white" />
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="0dp"
+                                    android:layout_height="70dp"
+                                    android:layout_margin="@dimen/dp_5"
+                                    android:layout_weight="1"
+                                    app:cardBackgroundColor="@color/gray"
+                                    app:cardCornerRadius="@dimen/dp_4">
+
+                                    <com.syneygy.fillnow.Jpfmsdutymanager.fillnowdutymanager1.custom.fonts.LatoRegularTextView
+                                        android:id="@+id/btnResume"
+                                        style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="70dp"
+                                        android:layout_gravity="center"
+                                        android:enabled="false"
+                                        android:gravity="center"
+                                        android:padding="5dp"
+                                        android:text="Resume"
+                                        android:textColor="@color/white" />
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="0dp"
+                                    android:layout_height="70dp"
+                                    android:layout_margin="@dimen/dp_5"
+                                    android:layout_weight="1"
+                                    android:visibility="gone"
+                                    app:cardBackgroundColor="@color/gray"
+                                    app:cardCornerRadius="@dimen/dp_4">
+
+                                    <com.syneygy.fillnow.Jpfmsdutymanager.fillnowdutymanager1.custom.fonts.LatoRegularTextView
+                                        android:id="@+id/btn_for_idlestate"
+                                        style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="70dp"
+                                        android:layout_gravity="center"
+                                        android:enabled="true"
+                                        android:gravity="center"
+                                        android:padding="5dp"
+                                        android:text="Make Idle"
+                                        android:textColor="@color/white" />
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/orderCompletedLay"
+                                    android:layout_width="0dp"
+                                    android:layout_height="70dp"
+                                    android:layout_margin="@dimen/dp_5"
+                                    android:layout_weight="1"
+                                    android:visibility="gone"
+                                    app:cardBackgroundColor="@color/md_blue_400"
+                                    app:cardCornerRadius="@dimen/dp_4">
+
+                                    <com.syneygy.fillnow.Jpfmsdutymanager.fillnowdutymanager1.custom.fonts.LatoRegularTextView
+                                        android:id="@+id/orderCompleted"
+                                        style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="70dp"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:padding="5dp"
+                                        android:text="Complete"
+                                        android:textColor="@color/white"
+                                        android:visibility="gone" />
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="0dp"
+                                    android:layout_height="70dp"
+                                    android:layout_margin="@dimen/dp_5"
+                                    android:layout_weight="1"
+                                    app:cardBackgroundColor="@color/gray"
+                                    app:cardCornerRadius="@dimen/dp_4">
+
+                                    <com.syneygy.fillnow.Jpfmsdutymanager.fillnowdutymanager1.custom.fonts.LatoRegularTextView
+                                        android:id="@+id/btnStop"
+                                        style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="70dp"
+                                        android:layout_gravity="center"
+                                        android:enabled="false"
+                                        android:gravity="center"
+                                        android:padding="5dp"
+                                        android:text="Stop"
+                                        android:textColor="@color/white" />
+                                </androidx.cardview.widget.CardView>
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".5"
+                            android:orientation="vertical"
+                            android:paddingLeft="@dimen/dp_10"
+                            android:paddingRight="@dimen/dp_10">
+
+
+                            <LinearLayout
+                                android:id="@+id/wifiSettingLay"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/dp_5"
+                                android:background="@drawable/border"
+                                android:orientation="vertical">
+
+                                <com.syneygy.fillnow.Jpfmsdutymanager.fillnowdutymanager1.custom.fonts.LatoRegularTextView
+                                    android:id="@+id/connectionStatus"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:paddingStart="@dimen/dp_5"
+                                    android:text="Wifi Connection Status"
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp" />
+
+                                <com.syneygy.fillnow.Jpfmsdutymanager.fillnowdutymanager1.custom.fonts.LatoSemiBoldTextView
+                                    android:id="@+id/pumpStatus"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_marginTop="5dp"
+                                    android:background="@color/c_dark_blue"
+                                    android:gravity="center"
+                                    android:paddingStart="@dimen/dp_5"
+                                    android:text="Connecting..."
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/white"
+                                    android:textSize="12sp" />
+
+                                <com.syneygy.fillnow.Jpfmsdutymanager.fillnowdutymanager1.custom.fonts.LatoSemiBoldTextView
+                                    android:id="@+id/tvReconnect"
+                                    style="@style/Base.TextAppearance.AppCompat.Small"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_gravity="center"
+                                    android:background="#580a31"
+                                    android:gravity="center"
+                                    android:paddingStart="@dimen/dp_5"
+                                    android:paddingLeft="@dimen/dp_5"
+                                    android:paddingRight="@dimen/dp_5"
+                                    android:text="Reconnect"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/white" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/txtOtherDetails2Lay"
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/wifiSettingLay"
+                                android:layout_margin="@dimen/dp_5"
+                                android:background="@drawable/border"
+                                android:orientation="vertical"
+                                android:padding="@dimen/dp_5">
+
+                                <com.syneygy.fillnow.Jpfmsdutymanager.fillnowdutymanager1.custom.fonts.LatoRegularTextView
+                                    android:id="@+id/rfId"
+                                    style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+
+                                    android:gravity="center|start"
+                                    android:text="RF Id:" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:orientation="horizontal">
+
+                                    <com.syneygy.fillnow.Jpfmsdutymanager.fillnowdutymanager1.custom.fonts.LatoRegularTextView
+                                        style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="40dp"
+                                        android:gravity="center|start"
+                                        android:text="In Range" />
+
+                                    <View
+                                        android:id="@+id/blinkCircle"
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:layout_gravity="center|start"
+                                        android:layout_marginLeft="@dimen/dp_5"
+                                        android:layout_marginTop="@dimen/dp_3"
+                                        android:background="@drawable/circle" />
+                                </LinearLayout>
+
+                                <com.syneygy.fillnow.Jpfmsdutymanager.fillnowdutymanager1.custom.fonts.LatoRegularTextView
+                                    android:id="@+id/dispensingIn"
+                                    style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_marginTop="5dp"
+                                    android:gravity="center|start"
+                                    android:text="DISPENSING IN:" />
+                                <com.syneygy.fillnow.Jpfmsdutymanager.fillnowdutymanager1.custom.fonts.LatoRegularTextView
+                                    android:id="@+id/analogReadingVol_intial"
+                                    style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="30dp"
+                                    android:layout_below="@+id/bypassRfid"
+                                    android:layout_marginTop="5dp"
+                                    android:gravity="center|start"
+                                    android:text="Reading:XXX.XX" />
+                                <com.syneygy.fillnow.Jpfmsdutymanager.fillnowdutymanager1.custom.fonts.LatoRegularTextView
+                                    android:id="@+id/analogReadingVol_final"
+                                    style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="30dp"
+                                    android:layout_below="@+id/analogReadingVol_intial"
+                                    android:layout_marginTop="5dp"
+                                    android:gravity="center|start"
+                                    android:text="Reading:XXX.XX" />
+                            </LinearLayout>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/bypassRfid"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/txtOtherDetails2Lay"
+                                android:layout_margin="@dimen/dp_5"
+                                app:cardCornerRadius="@dimen/dp_4">
+
+                                <com.syneygy.fillnow.Jpfmsdutymanager.fillnowdutymanager1.custom.fonts.LatoRegularTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:background="#A2A7EB"
+                                    android:enabled="false"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:text="Bypass RFID"
+                                    android:textColor="@color/black" />
+                            </androidx.cardview.widget.CardView>
+
+
+                            <com.syneygy.fillnow.Jpfmsdutymanager.fillnowdutymanager1.custom.fonts.LatoRegularTextView
+                                android:id="@+id/dispenserOrderQnty"
+                                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                android:layout_width="wrap_content"
+                                android:layout_height="30dp"
+                                android:layout_below="@+id/bypassRfid"
+                                android:layout_marginTop="5dp"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="Order Qnty:XXX.XX Lts" />
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="70dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_margin="@dimen/dp_5"
+                                app:cardCornerRadius="@dimen/dp_4">
+
+                                <com.syneygy.fillnow.Jpfmsdutymanager.fillnowdutymanager1.custom.fonts.LatoRegularTextView
+                                    android:id="@+id/btnStart"
+                                    style="@style/Base.TextAppearance.AppCompat.Subhead"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="70dp"
+                                    android:layout_gravity="center"
+                                    android:background="@color/gray"
+                                    android:enabled="false"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:text="Start"
+                                    android:textColor="@color/white" />
+                            </androidx.cardview.widget.CardView>
+
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/txtDispenseStatusLay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="horizontal">
+
+                        <com.syneygy.fillnow.Jpfmsdutymanager.fillnowdutymanager1.custom.fonts.LatoRegularTextView
+                            android:id="@+id/tv_connect_bluetooth"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:background="#580a31"
+                            android:gravity="center"
+                            android:padding="@dimen/dp_5"
+                            android:text="Connect Printer"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white" />
+
+                        <com.syneygy.fillnow.Jpfmsdutymanager.fillnowdutymanager1.custom.fonts.LatoRegularTextView
+                            android:id="@+id/tv_dispense_txt"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:background="#580a31"
+                            android:gravity="center"
+                            android:padding="@dimen/dp_5"
+                            android:paddingLeft="20dp"
+                            android:text="Dispense"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white" />
+
+                        <com.syneygy.fillnow.Jpfmsdutymanager.fillnowdutymanager1.custom.fonts.LatoRegularTextView
+                            android:id="@+id/fuelingMode"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:background="@color/c_dark_blue"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="ONLINE"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+            </androidx.core.widget.NestedScrollView>
+        </LinearLayout>
+
+
+        <androidx.cardview.widget.CardView
+            android:visibility="gone"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/dp_4"
+            android:layout_weight=".4"
+            app:cardElevation="4dp">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#FFFF00"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:background="#A2A7EB"
+                            android:gravity="center"
+                            android:text="Total Balance Available "
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/tv_total_balance_availabl"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:background="#FFFF00"
+                            android:gravity="center"
+                            android:text="0.00"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:background="#A2A7EB"
+                            android:gravity="center"
+                            android:text=" Lts"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_100"
+                        android:background="@color/white"
+                        android:gravity="center_horizontal"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_toLeftOf="@+id/centerLine"
+                            android:gravity="center">
+
+                            <com.syneygy.fillnow.Jpfmsdutymanager.fillnowdutymanager1.custom.WaveLoadingView
+                                android:id="@+id/waveLoadingViewTank1"
+                                android:layout_width="125dp"
+                                android:layout_height="80dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_gravity="center"
+                                android:visibility="gone"
+                                app:wlv_borderColor="@color/md_grey_500"
+                                app:wlv_borderWidth="2dp"
+                                app:wlv_progressValue="10"
+                                app:wlv_round_rectangle="true"
+                                app:wlv_shapeType="circle"
+                                app:wlv_titleCenter="0.00"
+                                app:wlv_titleCenterColor="@color/black"
+                                app:wlv_titleCenterSize="14sp"
+                                app:wlv_triangle_direction="north"
+                                app:wlv_waveAmplitude="40"
+                                app:wlv_waveColor="@color/md_blue_200" />
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/centerLine"
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_centerHorizontal="true"
+                            android:background="@color/md_grey_400" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_toRightOf="@+id/centerLine"
+                            android:gravity="center"
+                            android:padding="5dp">
+
+                            <com.syneygy.fillnow.Jpfmsdutymanager.fillnowdutymanager1.custom.WaveLoadingView
+                                android:id="@+id/waveLoadingViewTank2"
+                                android:layout_width="125dp"
+                                android:layout_height="80dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_gravity="center"
+                                app:wlv_borderColor="@color/md_grey_500"
+                                app:wlv_borderWidth="2dp"
+                                app:wlv_progressValue="10"
+                                app:wlv_round_rectangle="true"
+                                app:wlv_shapeType="circle"
+                                app:wlv_titleCenter="0.00"
+                                app:wlv_titleCenterColor="@color/black"
+                                app:wlv_titleCenterSize="14sp"
+                                app:wlv_triangle_direction="north"
+                                app:wlv_waveAmplitude="40"
+                                app:wlv_waveColor="@color/md_blue_200" />
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="center_horizontal"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/tv_tank1"
+                            android:layout_width="0dp"
+                            android:layout_height="20dp"
+                            android:layout_weight="1"
+                            android:background="@color/md_yellow_700"
+                            android:gravity="center"
+                            android:text="Tank 1"
+                            android:textColor="@color/white" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/md_grey_400" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="20dp"
+                            android:layout_weight="1"
+                            android:background="@color/md_yellow_700"
+                            android:gravity="center"
+                            android:text="Tank 2"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/Base.TextAppearance.AppCompat.Subhead"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+
+                        android:layout_marginTop="@dimen/dp_2"
+
+                        android:layout_marginBottom="@dimen/dp_2"
+                        android:background="#580a31"
+                        android:gravity="center"
+                        android:text="Bypass ATG"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:visibility="gone"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:background="#FFFF00"
+                        android:gravity="center"
+                        android:text="Manhole Lock Status"
+                        android:textColor="@color/black"
+                        android:visibility="gone" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:background="@color/white"
+                        android:gravity="center_horizontal"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="125dp"
+                            android:layout_height="60dp"
+                            android:layout_alignParentLeft="true"
+                            android:scaleType="centerCrop"
+
+                            android:src="@mipmap/main_hole" />
+
+                        <com.syneygy.fillnow.Jpfmsdutymanager.fillnowdutymanager1.custom.fonts.LatoBoldTextView
+                            android:layout_width="105dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginLeft="@dimen/dp_13"
+                            android:gravity="center"
+                            android:text="Locked"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="11sp" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_centerHorizontal="true"
+                            android:background="@color/md_grey_400" />
+
+                        <ImageView
+                            android:layout_width="125dp"
+                            android:layout_height="60dp"
+                            android:layout_alignParentRight="true"
+                            android:scaleType="centerCrop"
+                            android:src="@mipmap/main_hole" />
+
+
+                        <com.syneygy.fillnow.Jpfmsdutymanager.fillnowdutymanager1.custom.fonts.LatoBoldTextView
+                            android:layout_width="105dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginRight="@dimen/dp_6"
+                            android:gravity="center"
+                            android:text="Locked"
+                            android:textAllCaps="true"
+                            android:textColor="@color/black"
+                            android:textSize="11sp" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="center_horizontal"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="20dp"
+                            android:layout_weight="1"
+                            android:background="@color/colorGreeen"
+                            android:gravity="center"
+                            android:text="Manhole 1"
+                            android:textColor="@color/white" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/md_grey_400" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="20dp"
+                            android:layout_weight="1"
+                            android:background="@color/colorGreeen"
+                            android:gravity="center"
+                            android:text="Manhole 2"
+
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:background="#A2A7EB"
+                        android:gravity="center"
+                        android:text="GPS Status"
+                        android:textColor="@color/black" />
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/connectionStatusLay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/site_lattidue"
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="1"
+                            android:background="#A2A7EB"
+                            android:ellipsize="marquee"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10dp"
+                            android:singleLine="true"
+                            android:text="Lat :"
+                            android:textColor="@color/black" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_centerHorizontal="true"
+                            android:background="@color/md_grey_400" />
+
+                        <TextView
+                            android:id="@+id/site_longitude"
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="1"
+                            android:background="#A2A7EB"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10dp"
+                            android:text="Long :"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/tv_gps_range"
+                        style="@style/Base.TextAppearance.AppCompat.Subhead"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:layout_marginTop="@dimen/dp_2"
+                        android:layout_marginBottom="@dimen/dp_2"
+                        android:background="#A2A7EB"
+                        android:text="Range:"
+                        android:textColor="@color/black" />
+
+                    <TextView
+
+                        android:id="@+id/tv_bypass_gps"
+                        style="@style/Base.TextAppearance.AppCompat.Subhead"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:layout_marginTop="@dimen/dp_2"
+                        android:layout_marginBottom="@dimen/dp_2"
+                        android:background="@drawable/border_sky"
+                        android:gravity="center"
+                        android:text="Bypass GPS"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:visibility="gone" />
+
+
+                    <TextView
+                        android:visibility="gone"
+                        style="@style/Base.TextAppearance.AppCompat.Subhead"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layout_marginBottom="@dimen/dp_2"
+                        android:background="@color/md_white_1000"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:text="Command in Execution:"
+                        android:textAllCaps="true"
+                        android:textColor="@color/md_black_1000"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/tv_command_in_execution"
+                        style="@style/Base.TextAppearance.AppCompat.Subhead"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:layout_marginTop="@dimen/dp_2"
+                        android:layout_marginBottom="@dimen/dp_2"
+                        android:background="#92064D"
+                        android:gravity="center"
+                        android:text=""
+                        android:textAllCaps="true"
+                        android:textColor="@color/md_black_1000" />
+
+                    <TextView
+                        android:visibility="gone"
+                        style="@style/Base.TextAppearance.AppCompat.Subhead"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layout_marginBottom="@dimen/dp_2"
+                        android:background="@color/md_white_1000"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:text="Wifi Server Status:"
+                        android:textAllCaps="true"
+                        android:textColor="@color/md_black_1000"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/Base.TextAppearance.AppCompat.Subhead"
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="@dimen/dp_2"
+                            android:layout_marginBottom="@dimen/dp_2"
+                            android:layout_weight="0.7"
+                            android:background="#92064D"
+                            android:gravity="center"
+                            android:text="RS-232 General: "
+                            android:textAllCaps="true"
+                            android:textColor="@color/md_white_1000" />
+
+                        <TextView
+                            android:id="@+id/tv_wifi_server_status_285"
+                            style="@style/Base.TextAppearance.AppCompat.Subhead"
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="@dimen/dp_2"
+                            android:layout_marginBottom="@dimen/dp_2"
+                            android:layout_weight="1.3"
+                            android:background="#92064D"
+                            android:gravity="center"
+                            android:text="Disconnected"
+                            android:textColor="@color/md_white_1000" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/Base.TextAppearance.AppCompat.Subhead"
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="@dimen/dp_2"
+                            android:layout_marginBottom="@dimen/dp_2"
+                            android:layout_weight="0.7"
+                            android:background="#92064D"
+                            android:gravity="center"
+                            android:text="RS-232 ATG: "
+                            android:textAllCaps="true"
+                            android:textColor="@color/md_white_1000" />
+
+                        <TextView
+                            android:id="@+id/tv_wifi_server_status_285_atg"
+                            style="@style/Base.TextAppearance.AppCompat.Subhead"
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="@dimen/dp_2"
+                            android:layout_marginBottom="@dimen/dp_2"
+                            android:layout_weight="1.3"
+                            android:background="#92064D"
+                            android:gravity="center"
+                            android:text="Disconnected"
+                            android:textColor="@color/md_white_1000" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/Base.TextAppearance.AppCompat.Subhead"
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="@dimen/dp_2"
+                            android:layout_marginBottom="@dimen/dp_2"
+                            android:layout_weight="0.7"
+                            android:background="#92064D"
+                            android:gravity="center"
+                            android:text="RS-232 RFID: "
+                            android:textAllCaps="true"
+                            android:textColor="@color/md_white_1000" />
+
+                        <TextView
+                            android:id="@+id/tv_wifi_server_status_285_rfid"
+                            style="@style/Base.TextAppearance.AppCompat.Subhead"
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="@dimen/dp_2"
+                            android:layout_marginBottom="@dimen/dp_2"
+                            android:layout_weight="1.3"
+                            android:background="#92064D"
+                            android:gravity="center"
+                            android:text="Disconnected"
+                            android:textColor="@color/md_white_1000" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/Base.TextAppearance.AppCompat.Subhead"
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="@dimen/dp_2"
+                            android:layout_marginBottom="@dimen/dp_2"
+                            android:layout_weight="0.7"
+                            android:background="#92064D"
+                            android:gravity="center"
+                            android:text="RS-485 General: "
+                            android:textAllCaps="true"
+                            android:textColor="@color/md_white_1000" />
+
+                        <TextView
+                            android:id="@+id/tv_wifi_server_status_485"
+                            style="@style/Base.TextAppearance.AppCompat.Subhead"
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="@dimen/dp_2"
+                            android:layout_marginBottom="@dimen/dp_2"
+                            android:layout_weight="1.3"
+                            android:background="#92064D"
+                            android:gravity="center"
+                            android:text="Disconnected"
+                            android:textColor="@color/md_white_1000" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/Base.TextAppearance.AppCompat.Subhead"
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="@dimen/dp_2"
+                            android:layout_marginBottom="@dimen/dp_2"
+                            android:layout_weight="0.7"
+                            android:background="#92064D"
+                            android:gravity="center"
+                            android:text="RS-485 Status: "
+                            android:textAllCaps="true"
+                            android:textColor="@color/md_white_1000" />
+
+                        <TextView
+                            android:id="@+id/tv_wifi_server_status_485_status"
+                            style="@style/Base.TextAppearance.AppCompat.Subhead"
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="@dimen/dp_2"
+                            android:layout_marginBottom="@dimen/dp_2"
+                            android:layout_weight="1.3"
+                            android:background="#92064D"
+                            android:gravity="center"
+                            android:text="Disconnected"
+                            android:textColor="@color/md_white_1000" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/Base.TextAppearance.AppCompat.Subhead"
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="@dimen/dp_2"
+                            android:layout_marginBottom="@dimen/dp_2"
+                            android:layout_weight="0.7"
+                            android:background="#92064D"
+                            android:gravity="center"
+                            android:text="RS-485 Read Txn: "
+                            android:textAllCaps="true"
+                            android:textColor="@color/md_white_1000" />
+
+                        <TextView
+                            android:id="@+id/tv_wifi_server_status_485_read_txn"
+                            style="@style/Base.TextAppearance.AppCompat.Subhead"
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="@dimen/dp_2"
+                            android:layout_marginBottom="@dimen/dp_2"
+                            android:layout_weight="1.3"
+                            android:background="#92064D"
+                            android:gravity="center"
+                            android:text="Disconnected"
+                            android:textColor="@color/md_white_1000" />
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btn_refresh_232_485_server_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:background="#580a31"
+                        android:text="Refresh"
+                        android:textColor="@android:color/white" />
+
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+</LinearLayout>

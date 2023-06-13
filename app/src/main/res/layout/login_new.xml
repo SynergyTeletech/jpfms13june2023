@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/mainla"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="4dp"
+        app:cardUseCompatPadding="true">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:id="@+id/mainF"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:src="@drawable/synergyandjplogo" />
+
+                    <com.syneygy.fillnow.Jpfmsdutymanager.fillnowdutymanager1.custom.fonts.LatoBoldTextView
+                        style="@style/Base.TextAppearance.AppCompat.Headline"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Duty Manager"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black" />
+
+                    <com.syneygy.fillnow.Jpfmsdutymanager.fillnowdutymanager1.custom.fonts.LatoBoldTextView
+                        style="@style/Base.TextAppearance.AppCompat.Subhead"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Login"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:visibility="gone" />
+
+                    <View
+                        android:id="@+id/divi2"
+                        android:layout_width="100dp"
+                        android:layout_height="@dimen/dp_2"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:background="#580a31" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/dp_30"
+                        android:paddingTop="@dimen/dp_30"
+                        android:paddingRight="@dimen/dp_40">
+
+                        <EditText
+                            android:id="@+id/user_email"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@null"
+                            android:drawableRight="@drawable/ic_user"
+                            android:drawableTint="@color/md_grey_600"
+                            android:hint="abc@gmail.com"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/gray" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="@dimen/dp_5"
+                            android:layout_marginRight="@dimen/dp_50"
+                            android:layout_marginBottom="@dimen/dp_5"
+                            android:background="@color/gray" />
+<!--//Duty@123-->
+                        <EditText
+                            android:id="@+id/user_password"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@null"
+                            android:drawableRight="@drawable/ic_lock"
+                            android:drawableTint="@color/md_grey_600"
+                            android:hint="Password"
+                            android:text=""
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/gray" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="@dimen/dp_5"
+                            android:layout_marginRight="@dimen/dp_50"
+                            android:layout_marginBottom="@dimen/dp_5"
+                            android:background="@color/gray" />
+
+                        <EditText
+                            android:id="@+id/odometer_reading"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@null"
+                            android:hint="Odometer Reading"
+                            android:text=""
+                            android:visibility="gone"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/gray" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="@dimen/dp_5"
+                            android:visibility="gone"
+                            android:layout_marginRight="@dimen/dp_50"
+                            android:layout_marginBottom="@dimen/dp_5"
+                            android:background="@color/gray" />
+
+                        <EditText
+                            android:id="@+id/locationTrackingUrl"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@null"
+                            android:visibility="gone"
+                            android:hint="Location tracking url"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/gray" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="@dimen/dp_5"
+                            android:layout_marginRight="@dimen/dp_50"
+                            android:visibility="gone"
+                            android:layout_marginBottom="@dimen/dp_5"
+                            android:background="@color/gray" />
+                    </LinearLayout>
+
+
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/dp_40">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:cardBackgroundColor="#580a31"
+                            app:cardCornerRadius="@dimen/dp_4">
+
+                            <com.syneygy.fillnow.Jpfmsdutymanager.fillnowdutymanager1.custom.fonts.LatoSemiBoldTextView
+                                android:id="@+id/login_button"
+                                android:layout_width="150dp"
+                                android:layout_height="45dp"
+                                android:gravity="center"
+                                android:text="Login"
+                                android:textColor="@color/white" />
+
+                        </androidx.cardview.widget.CardView>
+
+
+                        <ProgressBar
+                            android:id="@+id/pb"
+                            android:layout_width="@dimen/dp_20"
+                            android:layout_height="@dimen/dp_20"
+                            android:layout_centerInParent="true"
+                            android:background="@color/md_pink_500"
+                            android:visibility="visible" />
+
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:id="@+id/forgetPassword"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_4"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:text="forget password?"
+                        android:textColor="#580a31" />
+
+
+                    <ProgressBar
+                        android:id="@+id/pBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:visibility="gone" />
+                    <TextView
+                        android:id="@+id/versionCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_4"
+                        android:layout_marginTop="@dimen/dp_10"
+
+                        android:layout_gravity="bottom"
+                        android:gravity="bottom"
+                        android:textSize="@dimen/sp_12"
+                        android:textColor="@color/green" />
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+
+                    <ImageView
+                        android:id="@+id/print_test"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:rotation="360"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/petrolll" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#4F918E89"
+                        android:visibility="gone" />
+
+                    <com.syneygy.fillnow.Jpfmsdutymanager.fillnowdutymanager1.custom.fonts.LatoBoldTextView
+                        android:id="@+id/txtWelcome"
+                        style="@style/Base.TextAppearance.AppCompat.Headline"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="140dp"
+                        android:gravity="center"
+                        android:text="Welcome"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="30sp"
+                        android:visibility="gone" />
+
+                    <View
+                        android:id="@+id/divi"
+                        android:layout_width="70dp"
+                        android:layout_height="@dimen/dp_2"
+                        android:layout_below="@+id/txtWelcome"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="@dimen/dp_5"
+                        android:background="@color/white"
+                        android:visibility="gone" />
+
+                    <com.syneygy.fillnow.Jpfmsdutymanager.fillnowdutymanager1.custom.fonts.LatoRegularTextView
+                        style="@style/Base.TextAppearance.AppCompat.Subhead"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/divi"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:padding="10dp"
+
+                        android:text="We are India’s 1st On Demand Fully Automated Fuel Delivery Service under the brand name FillNow. Founded by a team of highly inspired young technocrats with commendable expertise in the field of On-site refueling &amp; pilferage control of petroleum products, our company is head quartered in Noida, and is looking to spread operations across India."
+                        android:textColor="@color/white"
+                        android:visibility="gone" />
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        app:cardBackgroundColor="#00000000">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="@dimen/dp_50"
+            android:layout_margin="@dimen/dp_5"
+            android:padding="@dimen/dp_4"
+            android:src="@mipmap/ic_setting" />
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

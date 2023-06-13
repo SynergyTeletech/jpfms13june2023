@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="com.syneygy.fillnow.Jpfmsdutymanager.fillnowdutymanager1.fragments.FragmentReceivedPayment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/dp_30">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_70"
+            android:src="@drawable/card_icon"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="126dp" />
+
+        <TextView
+            android:id="@+id/tv_payment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Payment Details"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_23"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+        <TextView
+            android:id="@+id/tv_enter_payment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Please Enter Payment Details"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_12"
+            app:layout_constraintTop_toBottomOf="@+id/tv_payment" />
+
+        <!--<LinearLayout-->
+        <!--android:id="@+id/ll_order"-->
+        <!--style="@style/payment_ll"-->
+        <!--app:layout_constraintTop_toBottomOf="@id/tv_enter_payment">-->
+        <!--<LinearLayout-->
+        <!--android:orientation="horizontal"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
+        <!--<ImageView-->
+        <!--android:src="@drawable/home_icon"-->
+        <!--android:layout_width="@dimen/dp_25"-->
+        <!--android:layout_height="@dimen/dp_25" />-->
+        <!--<TextView-->
+        <!--android:layout_marginLeft="@dimen/dp_20"-->
+        <!--android:textColor="@color/black"-->
+        <!--android:gravity="center"-->
+        <!--android:textStyle="bold"-->
+        <!--android:textSize="@dimen/sp_16"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Order No"/>-->
+        <!--<EditText-->
+        <!--android:text="12345678"-->
+        <!--style="@style/payment_edit" />-->
+        <!--</LinearLayout>-->
+        <!--<TextView-->
+        <!--android:background="@color/grey"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1dp" />-->
+        <!--</LinearLayout>-->
+        <LinearLayout
+            android:id="@+id/paymentTypeL"
+            style="@style/payment_ll"
+            android:background="@drawable/square_background"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_enter_payment">
+
+
+
+            <LinearLayout
+                android:id="@+id/paymentType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="@dimen/dp_25"
+                    android:layout_height="@dimen/dp_25"
+                    android:src="@drawable/cheque_num" />
+                <Spinner
+                    android:id="@+id/sPaymentType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/paymentMode"
+            style="@style/payment_ll"
+            android:background="@drawable/square_background"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/paymentTypeL">
+
+
+
+            <LinearLayout
+                android:id="@+id/paymentMode1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="@dimen/dp_25"
+                    android:layout_height="@dimen/dp_25"
+                    android:src="@drawable/cheque_num" />
+                <Spinner
+                    android:id="@+id/paymentModeS"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_customerId"
+            style="@style/payment_ll"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/paymentMode">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/dp_25"
+                    android:layout_height="@dimen/dp_25"
+                    android:src="@drawable/cheque_num" />
+                <!--                <TextView-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginLeft="@dimen/dp_20"-->
+                <!--                    android:gravity="center"-->
+                <!--                    android:text="Customer Id"-->
+                <!--                    android:textColor="@color/black"-->
+                <!--                    android:textSize="@dimen/sp_16"-->
+                <!--                    android:textStyle="bold" />-->
+                <EditText
+                    android:id="@+id/et_customer_id"
+                    style="@style/payment_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:gravity="left|center"
+                    android:hint="Customer Id" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:background="@color/gray" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_bank"
+            style="@style/payment_ll"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_customerId">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/dp_25"
+                    android:layout_height="@dimen/dp_25"
+                    android:src="@drawable/bank_name" />
+
+                <!--                <TextView-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginLeft="@dimen/dp_20"-->
+                <!--                    android:gravity="center"-->
+                <!--                    android:text="Bank Name"-->
+                <!--                    android:textColor="@color/black"-->
+                <!--                    android:textSize="@dimen/sp_16"-->
+                <!--                    android:textStyle="bold" />-->
+
+                <EditText
+                    android:id="@+id/et_bank_name"
+                    style="@style/payment_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:gravity="left|center"
+                    android:hint="Bank Name" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_bank_address"
+            style="@style/payment_ll"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_bank">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/dp_25"
+                    android:layout_height="@dimen/dp_25"
+                    android:src="@drawable/loc_icon" />
+
+                <!--                <TextView-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginLeft="@dimen/dp_20"-->
+                <!--                    android:gravity="center"-->
+                <!--                    android:text="Bank Address"-->
+                <!--                    android:textColor="@color/black"-->
+                <!--                    android:textSize="@dimen/sp_16"-->
+                <!--                    android:textStyle="bold" />-->
+
+                <EditText
+                    android:id="@+id/bank_address"
+                    style="@style/payment_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:gravity="left|center"
+                    android:hint="Bank Address" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_cheque"
+            style="@style/payment_ll"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_bank_address">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/dp_25"
+                    android:layout_height="@dimen/dp_25"
+                    android:src="@drawable/cheque_num" />
+
+                <!--                <TextView-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginLeft="@dimen/dp_20"-->
+                <!--                    android:gravity="center"-->
+                <!--                    android:text="Cheque No"-->
+                <!--                    android:textColor="@color/black"-->
+                <!--                    android:textSize="@dimen/sp_16"-->
+                <!--                    android:textStyle="bold" />-->
+
+                <EditText
+                    android:id="@+id/et_check_number"
+                    style="@style/payment_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:gravity="left|center"
+                    android:hint="Check_number" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_amount"
+            style="@style/payment_ll"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_cheque">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/dp_25"
+                    android:layout_height="@dimen/dp_25"
+                    android:src="@drawable/money_icon" />
+
+                <!--                <TextView-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginLeft="@dimen/dp_20"-->
+                <!--                    android:gravity="center"-->
+                <!--                    android:text="Amount"-->
+                <!--                    android:textColor="@color/black"-->
+                <!--                    android:textSize="@dimen/sp_16"-->
+                <!--                    android:textStyle="bold" />-->
+
+                <EditText
+                    android:id="@+id/et_amount"
+                    style="@style/payment_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:gravity="left|center"
+                    android:hint="Amount"
+                    android:inputType="number" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_checkDate"
+            style="@style/payment_ll"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_amount">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/dp_25"
+                    android:layout_height="@dimen/dp_25"
+                    android:src="@drawable/date" />
+
+                <!--                <TextView-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginLeft="@dimen/dp_20"-->
+                <!--                    android:gravity="center"-->
+                <!--                    android:text="Check Date"-->
+                <!--                    android:textColor="@color/black"-->
+                <!--                    android:textSize="@dimen/sp_16"-->
+                <!--                    android:textStyle="bold" />-->
+
+                <EditText
+                    android:id="@+id/et_date"
+                    style="@style/payment_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:gravity="left|center"
+                    android:hint="Date" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:background="@color/gray" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_remark"
+            style="@style/payment_ll"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_checkDate">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/dp_25"
+                    android:layout_height="@dimen/dp_25"
+                    android:src="@drawable/remark_icon" />
+
+                <!--                <TextView-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginLeft="@dimen/dp_20"-->
+                <!--                    android:gravity="center"-->
+                <!--                    android:text="Remark"-->
+                <!--                    android:textColor="@color/black"-->
+                <!--                    android:textSize="@dimen/sp_16"-->
+                <!--                    android:textStyle="bold" />-->
+
+                <EditText
+                    android:id="@+id/Remark"
+                    style="@style/payment_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:gravity="left|center"
+                    android:hint="Remark" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:background="@color/gray" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_300"
+            android:layout_marginRight="@dimen/dp_200"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/ll_remark">
+
+            <TextView
+                android:id="@+id/tv_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray" />
+
+            <Button
+                android:id="@+id/btnSubmit"
+                style="@style/btn_style"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp_20"
+                android:background="#580a31"
+                android:text="Submit" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

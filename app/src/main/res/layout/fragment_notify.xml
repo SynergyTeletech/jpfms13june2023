@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.syneygy.fillnow.Jpfmsdutymanager.fillnowdutymanager1.fragments.FragmentNotify">
+
+    <!-- TODO: Update Notify fragment layout -->
+    <CheckBox
+        android:id="@+id/cb_1"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_55"
+        android:layout_marginLeft="55dp"
+        android:layout_marginRight="0dp"
+        android:paddingRight="20dp"
+        android:scaleX="1.7"
+        android:scaleY="1.7"
+
+        android:text="Out For Delivery"
+        app:buttonTint="#580a31" />
+
+
+    <View
+        android:id="@+id/view_1"
+        android:layout_width="9dp"
+        android:layout_height="70dp"
+        android:layout_below="@id/cb_1"
+        android:layout_marginLeft="@dimen/dp_25"
+        android:background="@color/gray" />
+
+    <CheckBox
+        android:id="@+id/cb_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_1"
+        android:layout_marginStart="@dimen/dp_55"
+        android:layout_marginLeft="55dp"
+        android:layout_marginRight="0dp"
+        android:paddingRight="20dp"
+        android:scaleX="1.7"
+        android:scaleY="1.7"
+        android:text="Order Arrived"
+        app:buttonTint="#580a31" />
+
+    <View
+        android:id="@+id/view_3"
+        android:layout_width="9dp"
+        android:layout_height="70dp"
+        android:layout_below="@id/cb_2"
+        android:layout_marginLeft="@dimen/dp_25"
+        android:background="@color/gray"
+        android:visibility="gone" />
+
+    <CheckBox
+        android:id="@+id/cb_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_3"
+        android:layout_marginStart="@dimen/dp_55"
+        android:layout_marginLeft="55dp"
+        android:layout_marginRight="0dp"
+        android:paddingRight="20dp"
+        android:scaleX="1.7"
+        android:scaleY="1.7"
+        android:text="Order Completed"
+        android:visibility="gone"
+        app:buttonTint="#580a31" />
+    <!--<View-->
+    <!--android:id="@+id/view_2"-->
+    <!--android:background="@color/grey"-->
+    <!--android:layout_marginLeft="@dimen/dp_30"-->
+    <!--android:layout_below="@id/cb_3"-->
+    <!--android:layout_width="9dp"-->
+    <!--android:layout_height="70dp"/>-->
+
+
+</LinearLayout>

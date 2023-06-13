@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="@dimen/dp_30"
+    tools:context=".fragments.LockFragment">
+
+    <TextView
+        android:id="@+id/openLock"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:padding="@dimen/dp_10"
+        android:text="Open Lock"
+        android:textColor="@color/white"
+
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/stausLock"
+        app:layout_constraintEnd_toStartOf="@+id/closeLock"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/stausLock"
+        app:layout_constraintTop_toTopOf="@+id/stausLock" />
+
+    <TextView
+        android:id="@+id/closeLock"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:padding="@dimen/dp_10"
+        android:text="Close Lock"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+
+        app:layout_constraintBottom_toBottomOf="@+id/openLock"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/openLock"
+        app:layout_constraintTop_toTopOf="@+id/openLock" />
+
+    <TextView
+        android:id="@+id/stausLock"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:padding="@dimen/dp_10"
+        android:text="Lock Status"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/openLock"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/levelLock"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="4dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:padding="@dimen/dp_10"
+        android:text="Lock Analog Level"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/latLongLock"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stausLock" />
+
+    <TextView
+        android:id="@+id/latLongLock"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:padding="@dimen/dp_10"
+        android:text="Lock Lat Long"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/levelLock"
+        app:layout_constraintEnd_toStartOf="@+id/engineStatus"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/levelLock"
+        app:layout_constraintTop_toTopOf="@+id/levelLock" />
+
+    <TextView
+        android:id="@+id/engineStatus"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:padding="@dimen/dp_10"
+        android:text="Lock Engine Status"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/latLongLock"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/latLongLock"
+        app:layout_constraintTop_toTopOf="@+id/latLongLock" />
+
+    <TextView
+        android:id="@+id/setUrl"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="4dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:padding="@dimen/dp_10"
+        android:text="Set Url"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/deviceNameLock"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/levelLock" />
+
+    <TextView
+        android:id="@+id/deviceNameLock"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:padding="@dimen/dp_10"
+        android:text="Change Device No."
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/setUrl"
+        app:layout_constraintEnd_toStartOf="@+id/setApn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/setUrl"
+        app:layout_constraintTop_toTopOf="@+id/setUrl" />
+
+    <TextView
+        android:id="@+id/setApn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:padding="@dimen/dp_10"
+        android:text="Set Access Point Name"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/deviceNameLock"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/deviceNameLock"
+        app:layout_constraintTop_toTopOf="@+id/deviceNameLock" />
+    <TextView
+        android:id="@+id/setDelay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="4dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:padding="@dimen/dp_10"
+        android:text="Set Delay"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/restartModem"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/setUrl" />
+
+    <TextView
+        android:id="@+id/restartModem"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:padding="@dimen/dp_10"
+        android:text="Restart Modem"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/setDelay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/setDelay"
+        app:layout_constraintTop_toTopOf="@+id/setDelay" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

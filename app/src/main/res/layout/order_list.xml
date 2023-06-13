@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_orderlist2"
+    android:layout_width="match_parent"
+    android:layout_height="85dp"
+    android:weightSum="10">
+    <!--<RadioGroup-->
+    <!--android:id="@+id/radio_group_oder"-->
+    <!--android:gravity="center"-->
+    <!--android:layout_weight="1"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="match_parent">-->
+    <!--<RadioButton-->
+    <!--android:id="@+id/radio_button_order"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content" />-->
+    <!--</RadioGroup>-->
+
+    <LinearLayout
+        android:id="@+id/ll_orderlist"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/md_red_500"
+        android:orientation="vertical"
+        >
+
+
+        <TextView
+            android:id="@+id/tv_OrdeId"
+            style="@style/order_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="orderId"
+            android:textColor="@color/white" />
+
+        <com.syneygy.fillnow.Jpfmsdutymanager.fillnowdutymanager1.custom.fonts.LatoBoldTextView
+            android:id="@+id/tv_OrderType"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="end"
+            android:layout_marginLeft="@dimen/dp_1"
+            android:layout_marginRight="@dimen/dp_1"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/dp_5"
+            android:text="Express"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/customer_name"
+        style="@style/order_text" />
+    <TextView
+        android:id="@+id/equipmentId"
+        style="@style/order_text" />
+
+    <TextView
+        android:id="@+id/order_location"
+        style="@style/order_text" />
+
+
+
+    <TextView
+        android:id="@+id/order_address"
+        style="@style/order_text"
+        android:layout_weight="1.2"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/order_ContactPerson"
+        style="@style/order_text"
+        android:text="trtre"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/order_phone_number"
+        style="@style/order_text"
+        android:layout_width="50dp" />
+
+    <TextView
+        android:id="@+id/order_quantity"
+        style="@style/order_text"
+        />
+
+    <TextView
+        android:id="@+id/order_date_time"
+        style="@style/order_text" />
+
+    <TextView
+        android:id="@+id/order_status"
+        style="@style/order_text" />
+    <!--<TextView-->
+    <!--android:text="Accept"-->
+    <!--android:id="@+id/order_type"-->
+    <!--style="@style/order_text"/>-->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:paddingLeft="@dimen/dp_20">
+
+        <CheckBox
+            android:id="@+id/cb_Accepted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textIsSelectable="false" />
+    </LinearLayout>
+    <!--<LinearLayout-->
+    <!--android:layout_weight=".8"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:weightSum="1"-->
+    <!--android:layout_height="match_parent">-->
+    <!--<ImageView-->
+    <!--android:padding="@dimen/dp_5"-->
+    <!--android:src="@mipmap/accept"-->
+    <!--android:id="@+id/image_accept"-->
+    <!--android:layout_weight=".5"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="match_parent" />-->
+    <!--<ImageView-->
+    <!--android:paddingTop="@dimen/dp_5"-->
+    <!--android:paddingBottom="@dimen/dp_5"-->
+    <!--android:paddingRight="@dimen/dp_7"-->
+    <!--android:src="@mipmap/decline"-->
+    <!--android:id="@+id/image_reject"-->
+    <!--android:layout_weight=".5"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="match_parent" />-->
+    <!--</LinearLayout>-->
+</LinearLayout>
+

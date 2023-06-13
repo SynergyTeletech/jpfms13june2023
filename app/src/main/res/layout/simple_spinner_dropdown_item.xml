@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="9">
+
+    <TextView
+        android:id="@+id/cust_id"
+        style="@style/order_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dip"
+        android:layout_marginTop="2dip"
+        android:layout_weight="1"
+        android:padding="2dip"
+        android:text="id" />
+
+    <TextView
+        android:id="@+id/location"
+        style="@style/order_text"
+        android:layout_width="0dp"
+
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dip"
+        android:layout_marginTop="2dip"
+        android:layout_toRightOf="@+id/cust_id"
+        android:layout_weight="1"
+        android:padding="2dip"
+        android:text="loc" />
+
+    <TextView
+        android:id="@+id/address"
+        style="@style/order_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dip"
+        android:layout_marginTop="2dip"
+
+        android:layout_toRightOf="@+id/location"
+        android:layout_weight="1"
+        android:padding="2dip"
+        android:text="Address" />
+
+    <TextView
+        android:id="@+id/contact_person"
+        style="@style/order_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dip"
+        android:layout_marginTop="2dip"
+
+        android:layout_toRightOf="@+id/address"
+        android:layout_weight="1"
+        android:padding="2dip"
+        android:text="Name" />
+
+    <TextView
+        android:id="@+id/phone_num"
+        style="@style/order_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dip"
+        android:layout_marginTop="2dip"
+
+        android:layout_toRightOf="@+id/contact_person"
+        android:layout_weight="1"
+        android:padding="2dip"
+        android:text="Phone" />
+
+    <TextView
+        android:id="@+id/qunantity"
+        style="@style/order_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dip"
+        android:layout_marginTop="2dip"
+
+        android:layout_toRightOf="@+id/phone_num"
+        android:layout_weight="1"
+        android:padding="2dip"
+        android:text="Quantity" />
+
+    <TextView
+        android:id="@+id/time"
+        style="@style/order_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dip"
+        android:layout_marginTop="2dip"
+
+        android:layout_toRightOf="@+id/qunantity"
+        android:layout_weight="1"
+        android:padding="2dip"
+        android:text="Time" />
+
+    <TextView
+        android:id="@+id/status"
+        style="@style/order_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dip"
+        android:layout_marginTop="2dip"
+
+        android:layout_toRightOf="@+id/time"
+        android:layout_weight="1"
+        android:padding="2dip"
+        android:text="status" />
+</LinearLayout>
